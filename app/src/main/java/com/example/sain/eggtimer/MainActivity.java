@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             if (seekBar.getProgress() == 0) {
                 Toast.makeText(this, "Set a nonzero timer", Toast.LENGTH_SHORT).show();
             } else {
-                countDownTimer = new CountDownTimer(seekBar.getProgress() * 5 * 1000, 1000) {
+                countDownTimer = new CountDownTimer((seekBar.getProgress() * 5 * 1000) + 100, 1000) {
 
                     @Override
                     public void onTick(long millisUntilFinished) {
