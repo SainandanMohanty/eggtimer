@@ -43,8 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateTimer(int time) {
         TextView textView = findViewById(R.id.textView);
-        String timer = String.format(Locale.getDefault(), "%02d", time / 60) + ":" +
-                String.format(Locale.getDefault(), "%02d", time % 60);
+        String timer = String.format(Locale.getDefault(), "%02d:%02d", time / 60, time % 60);
         textView.setText(timer);
     }
 
